@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>足彩信息站 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fafaf9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #1f2937;
+      padding: 2rem 1.25rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* header / hero */
+    .hero {
+      margin: 1.2rem 0 2.8rem 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #111827;
+      margin-bottom: 0.6rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      max-width: 560px;
+      margin: 0 auto;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.2rem;
+    }
+
+    /* 卡片通用 */
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.02);
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #111827;
+      border-left: 4px solid #dbeafe;
+      padding-left: 0.75rem;
+    }
+    .card p {
+      margin-bottom: 1rem;
+      color: #374151;
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 用途卡片网格 */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+    .feature-item {
+      background: #f3f4f6;
+      border-radius: 18px;
+      padding: 1.2rem 1rem 1rem 1rem;
+    }
+    .feature-item .icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+      display: inline-block;
+    }
+    .feature-item h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      color: #1f2937;
+    }
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 0;
+    }
+
+    /* 适合人群 */
+    .audience-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 0.8rem;
+      margin-top: 0.3rem;
+    }
+    .audience-list li {
+      background: #eef2ff;
+      color: #3730a3;
+      border-radius: 40px;
+      padding: 0.3rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 450;
+    }
+
+    /* 链接段落 */
+    .link-sentence {
+      background: #f9fafb;
+      border-radius: 20px;
+      padding: 1.4rem 1.8rem;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+    .link-sentence a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .link-sentence a:hover {
+      border-bottom-color: #2563eb;
+    }
+
+    /* faq摘要 */
+    .faq-mini {
+      margin-top: 1.2rem;
+    }
+    .faq-mini details {
+      margin-bottom: 0.75rem;
+      border-bottom: 1px dashed #e2e8f0;
+      padding-bottom: 0.6rem;
+    }
+    .faq-mini summary {
+      font-weight: 480;
+      cursor: pointer;
+      color: #1e293b;
+      padding: 0.25rem 0;
+    }
+    .faq-mini summary::-webkit-details-marker {
+      color: #64748b;
+    }
+    .faq-mini details p {
+      margin: 0.5rem 0 0.2rem 0;
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    .footer-note {
+      text-align: center;
+      margin-top: 2.8rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 2rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 1.4rem 1.2rem;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
+      .audience-list {
+        gap: 0.5rem;
+      }
+      .link-sentence {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 主视觉 -->
+  <div class="hero">
+    <h1>关于足彩 · 信息站</h1>
+    <p>一份平实、清晰的站点介绍，帮助有兴趣的朋友更好地理解这个领域。</p>
+  </div>
+
+  <!-- 卡片：站点说明 & 可信角度 -->
+  <div class="card">
+    <h2>站点说明</h2>
+    <p>pc-football-lottery.com 是一个围绕足球赛事基本信息与参与方式的整理站点。网站内容以客观介绍为主，不推荐具体投注策略，也不提供任何形式的保证。我们更希望传递一种审慎、知情的态度——在接触<strong>足彩</strong>之前，先了解基本规则与常见概念。</p>
+    <p>网站的信息来源包括公开资料、赛事数据以及行业常识，并持续进行核对与更新，以保持内容相对可靠。同时站点不接受广告或付费推荐，所有内容均保持独立。</p>
+  </div>
+
+  <!-- 用途卡片 -->
+  <div class="card">
+    <h2>主要用途</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="icon">📘</div>
+        <h3>规则解读</h3>
+        <p>对常见玩法、赔率类型、过关方式做简明解释，适合初次接触的朋友。</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">🧮</div>
+        <h3>术语词表</h3>
+        <p>整理行业常用术语，方便快速查询，减少因信息不对称造成的困惑。</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">📅</div>
+        <h3>赛事参考</h3>
+        <p>提供主流联赛与杯赛的日程框架，不包含实时比分或预测。</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">⚖️</div>
+        <h3>理性提示</h3>
+        <p>包含参与原则、风险意识与责任提醒，倡导量力而行。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 适合人群 -->
+  <div class="card">
+    <h2>适合人群</h2>
+    <p>无论你处于哪个阶段，都可以在这里找到适合自己的内容：</p>
+    <ul class="audience-list">
+      <li>刚对足彩产生兴趣的新手</li>
+      <li>希望梳理基础概念的爱好看球者</li>
+      <li>想要了解规则框架的普通用户</li>
+      <li>寻找可信参考信息的理性参与者</li>
+      <li>仅做知识拓展的足球爱好者</li>
+    </ul>
+    <p style="margin-top: 1.2rem;">我们不会对任何人给出「应该参与」的建议，只希望让每一次了解都建立在清晰的信息之上。</p>
+  </div>
+
+  <!-- 自然链接段落 -->
+  <div class="link-sentence">
+    <p>如果你希望系统了解<strong>足彩</strong>的基本知识与信息框架，可以前往 <a href="https://pc-football-lottery.com">足彩</a> 页面，里面整理了规则、术语与常见问题，方便对照阅读。</p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="card">
+    <h2>常见疑问摘要</h2>
+    <div class="faq-mini">
+      <details>
+        <summary>这个网站是推荐我买彩票吗？</summary>
+        <p>不是。站点仅提供知识性介绍与参考信息，不包含任何投注建议或诱导性内容。是否参与完全由个人决定，请根据自身情况理性判断。</p>
+      </details>
+      <details>
+        <summary>信息准确吗？会经常更新吗？</summary>
+        <p>我们尽量使用公开可靠的来源，并定期核对核心数据。但由于赛事规则、赔率体系等可能变化，建议结合官方渠道交叉验证。</p>
+      </details>
+      <details>
+        <summary>我完全不懂足球，可以看吗？</summary>
+        <p>可以。站点从最基础的规则讲起，尽量避免使用未经解释的术语。如果你完全是新手，推荐从「规则解读」部分开始。</p>
+      </details>
+      <details>
+        <summary>有付费内容或会员吗？</summary>
+        <p>没有。本站所有内容免费开放，也不收取任何费用。未来也没有计划增加付费模块。</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer-note">
+    pc-football-lottery.com · 信息介绍页 · 内容仅供个人参考
+  </div>
+</div>
+</body>
+</html>
