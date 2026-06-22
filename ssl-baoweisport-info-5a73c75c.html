@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝威体育 · 资料索引与信息梳理</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f2f4f7;
+            color: #1e2a3a;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .page-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+        }
+        @media (min-width: 768px) {
+            body { padding: 3rem 2rem; }
+            .page-wrap { padding: 3.5rem 3rem; }
+        }
+
+        /* 开场短句 */
+        .opening-line {
+            font-size: 1.1rem;
+            letter-spacing: 0.01em;
+            color: #4b5c6b;
+            border-left: 4px solid #225b8f;
+            padding-left: 1.2rem;
+            margin-bottom: 2.2rem;
+            font-weight: 400;
+        }
+
+        /* 承接段落 */
+        .contextual {
+            background: #f8fafc;
+            padding: 1.8rem 2rem;
+            border-radius: 20px;
+            border: 1px solid #dfe6ef;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2.5rem;
+        }
+        .contextual p {
+            margin-bottom: 1rem;
+        }
+        .contextual p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 卡片网格 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin: 2.2rem 0 2.8rem;
+        }
+        @media (min-width: 640px) {
+            .feature-grid { grid-template-columns: 1fr 1fr; }
+        }
+        .feature-card {
+            background: #ffffff;
+            border: 1px solid #e0e6ee;
+            border-radius: 20px;
+            padding: 1.4rem 1.6rem 1.6rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s ease;
+        }
+        .feature-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            border-color: #bcc9da;
+        }
+        .feature-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1e2e42;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.01em;
+        }
+        .feature-card p {
+            font-size: 0.94rem;
+            color: #3a4b5e;
+        }
+        .feature-card .tag {
+            display: inline-block;
+            background: #e9eef4;
+            color: #1f3a5a;
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 0.15rem 0.7rem;
+            border-radius: 30px;
+            margin-top: 0.6rem;
+            letter-spacing: 0.02em;
+            border: 1px solid #d2dce8;
+        }
+
+        /* 温和结尾 */
+        .gentle-closing {
+            margin-top: 2.8rem;
+            padding: 1.6rem 2rem;
+            background: #f5f8fd;
+            border-radius: 24px;
+            border: 1px solid #dce4ef;
+            font-size: 0.95rem;
+            color: #2a3b4f;
+        }
+        .gentle-closing a {
+            color: #225b8f;
+            text-decoration: none;
+            border-bottom: 1px dotted #96aec9;
+            font-weight: 500;
+        }
+        .gentle-closing a:hover {
+            border-bottom: 2px solid #1a4a73;
+            color: #173e5e;
+        }
+
+        hr {
+            margin: 2rem 0 1.2rem;
+            border: none;
+            border-top: 1px solid #dde3ed;
+        }
+
+        .footnote {
+            font-size: 0.85rem;
+            color: #64778b;
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid #eaeef5;
+            padding-top: 1.5rem;
+        }
+
+        .faq-summary {
+            background: #fafcff;
+            border-radius: 18px;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 1rem;
+            border: 1px solid #dbe2ed;
+        }
+        .faq-summary details {
+            margin-bottom: 0.4rem;
+        }
+        .faq-summary summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #1f3b57;
+            padding: 0.3rem 0;
+        }
+        .faq-summary summary::-webkit-details-marker { color: #2f5c88; }
+        .faq-summary p {
+            margin: 0.3rem 0 0.6rem 0.8rem;
+            color: #3f536b;
+            font-size: 0.92rem;
+            border-left: 2px solid #b9cbdf;
+            padding-left: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- 开场短句 -->
+    <div class="opening-line">
+        ⚙️ 信息梳理 · 从分散到有序，一份围绕体育资料整合的简要索引。
+    </div>
+
+    <!-- 承接段落：从资料整理和信息索引的角度展开 -->
+    <div class="contextual">
+        <p>在日常信息收集中，体育相关的内容往往散见于赛事报道、数据平台、品牌站点之间。将这些片段加以分类、核对与索引，有助于快速定位可靠来源。本次整理基于对<strong>宝威体育</strong>相关公开信息的梳理，提取了几个常被问及的侧面，并按功能与场景做了轻量聚合，不涉及具体排名或推荐，仅作为信息参照。</p>
+        <p>以下卡片并非全面评价，而是从结构、覆盖范围和公开可查的细节出发，为需要快速了解该方向内容的用户提供一个简洁的笔记式索引。每个卡片都对应一个常见的关注维度——你可以将它理解为一张“信息地图”上的坐标点。</p>
+    </div>
+
+    <!-- 特点列表：四个卡片（信息密度较高） -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>① 内容结构与分类</h3>
+            <p>页面模块以赛事、数据、资讯为基本分区，层级清晰。公开可浏览的栏目多采用卡片式入口，归类逻辑偏向实用导向，便于按主题回溯。</p>
+            <span class="tag">索引层级</span>
+        </div>
+        <div class="feature-card">
+            <h3>② 信息覆盖范围</h3>
+            <p>涉及多种体育项目的赛程摘要、历史数据参考及规则说明，材料来源指向公开数据库与赛事官方记录。非独家报道性质，而是整合型索引。</p>
+            <span class="tag">聚合度</span>
+        </div>
+        <div class="feature-card">
+            <h3>③ 更新节奏与时效</h3>
+            <p>根据页面时间戳与存档快照，内容更新周期大致按赛季或重大赛事节点推进。部分静态说明页作为长期参考存在，版本变动频率较低。</p>
+            <span class="tag">版本参考</span>
+        </div>
+        <div class="feature-card">
+            <h3>④ 用户查阅路径</h3>
+            <p>从首页到子页面通常不超过两次点击，导航标签采用直述式命名。信息陈列侧重“可检索性”，适合作为备查入口或资料对照起点。</p>
+            <span class="tag">浏览效率</span>
+        </div>
+    </div>
+
+    <!-- 场景 + 提示（融合成一段，保持温和） -->
+    <p style="margin-bottom: 1.8rem; font-size: 0.96rem; background: #f5f8fc; padding: 1rem 1.8rem; border-radius: 16px; border: 1px solid #dae1ec;">
+        📌 如果你正在做赛事数据对比、信息归拢或需要一份经过梳理的体育内容索引，直接浏览 <a href="https://ssl-baoweisport.com" style="color: #1d4f7c; font-weight: 500; text-decoration: underline; text-underline-offset: 2px;">宝威体育</a> 的现有公开分区或许能提供一定的结构参考。建议结合具体查询目的，再配合其他数据源交叉验证。
+    </p>
+
+    <!-- FAQ 摘要（轻量，不喧宾夺主） -->
+    <div class="faq-summary">
+        <details>
+            <summary>❓ 这个页面是官方介绍吗？</summary>
+            <p>不是。这是从资料整理角度出发的信息索引页，仅汇总公开可查的内容结构，不包含任何官方立场、排名或推荐。</p>
+        </details>
+        <details>
+            <summary>❓ 我可以用这些信息做什么？</summary>
+            <p>适合作为快速了解宝威体育信息架构的起点，或用于与其他体育索引页面做结构对比。所有引用均基于公开页面内容。</p>
+        </details>
+        <details>
+            <summary>❓ 信息是否实时更新？</summary>
+            <p>本页为静态索引，不追踪实时变动。建议以 <a href="https://ssl-baoweisport.com" style="color: #1f4a73; text-decoration: underline; text-underline-offset: 2px;">宝威体育</a> 网站当前实际内容为准。</p>
+        </details>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-closing">
+        <p>📋 信息整理本身是一种对秩序的温和试探。本次对 <a href="https://ssl-baoweisport.com">宝威体育</a> 相关公开资料的索引与分类，旨在为需要快速定位体育内容结构的人提供一份简洁的参照笔记。没有喧哗的标签，只有平实的排列——希望对你下一次的资料查阅或信息归档有所助益。</p>
+        <p style="margin-top: 0.8rem; font-size: 0.9rem; color: #4d627a;">—— 索引编制于资料收集周期，2025 · 仅作结构参考</p>
+    </div>
+
+    <hr>
+    <div class="footnote">
+        本页为静态信息梳理页 · 内容基于公开来源整理 · 无诱导性或承诺性表述
+    </div>
+</div>
+</body>
+</html>
